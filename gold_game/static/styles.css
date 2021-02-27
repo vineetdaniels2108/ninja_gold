@@ -1,0 +1,42 @@
+.farm {
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    background-color: grey;
+    color: orangered;
+    margin-left: 20px;
+}
+
+#header{
+    display: inline-flex;
+}
+
+#header button{
+    width: 150px;
+    height: 50px;
+    margin: 20px;
+}
+
+#header h2{
+    margin-top: 30px;
+}
+
+#ninja_gold{
+    margin-left: 20px;
+}
+
+#houses{
+    display: inline-flex;
+}
+
+#activities {
+    height: 300px;
+    display: inline-block;
+    border-style: double;
+    width: 500px;
+    overflow: hidden;
+}
+
+#total_gold{
+    text-size-adjust: larger;
+}
