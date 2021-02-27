@@ -31,7 +31,20 @@ def farm_earn(request):
     building = gold_map[building_name]
     gold_value = random.choice(building)
     time = datetime.now().strftime("%m/%d/%Y %I:%M%p")
-    message = f"Earned {gold_value} from the {building_name} at time {time}"
+    
+    if building_name == 'casino':
+        mylist = [0,1]
+        result = random.choice(mylist)
+        if result == 0:
+            gold_value = random.choice(building) * -1
+            message = f"Earned {gold_value} from the {building_name} at time {time}"
+        else:
+            gold_value = random.choice(building)
+            message = f"Earned {gold_value} from the {building_name} at time {time}"
+    else:
+        gold_value = random.choice(building)
+        message = f"Earned {gold_value} from the {building_name} at time {time}"
+        
     
     request.session['gold'] += gold_value
     
